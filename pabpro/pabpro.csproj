@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E16887C5-92E3-438C-9A3E-B6FB2DEC656C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>pabpro</RootNamespace>
+    <AssemblyName>pabpro</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Drużyna.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity_9.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dane.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dane.Designer.cs">
+      <DependentUpon>Dane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logowanie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Logowanie.Designer.cs">
+      <DependentUpon>Logowanie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modyfikacja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modyfikacja.Designer.cs">
+      <DependentUpon>Modyfikacja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Przynależność.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Statystyki.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Statystyki.Designer.cs">
+      <DependentUpon>Statystyki.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TworzenieSpotkań.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TworzenieSpotkań.Designer.cs">
+      <DependentUpon>TworzenieSpotkań.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Spotkania.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spotkania.Designer.cs">
+      <DependentUpon>Spotkania.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Insert.cs" />
+    <Compile Include="Mecz.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Meczmodel.cs" />
+    <Compile Include="Miejsca.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Terminarz.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Trener.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="zadaniepabADataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>zadaniepabADataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="zadaniepabADataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>zadaniepabADataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="zadaniepabADataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>zadaniepabADataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="zadaniepabADataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>zadaniepabADataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="zadaniepabADataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>zadaniepabADataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="zadaniepabADataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>zadaniepabADataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="zadaniepabADataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>zadaniepabADataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Zawodnik.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Zdarzenia.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Dane.resx">
+      <DependentUpon>Dane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Logowanie.resx">
+      <DependentUpon>Logowanie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modyfikacja.resx">
+      <DependentUpon>Modyfikacja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statystyki.resx">
+      <DependentUpon>Statystyki.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TworzenieSpotkań.resx">
+      <DependentUpon>TworzenieSpotkań.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spotkania.resx">
+      <DependentUpon>Spotkania.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Drużyna.datasource" />
+    <None Include="Properties\DataSources\Mecz.datasource" />
+    <None Include="Properties\DataSources\Miejsca.datasource" />
+    <None Include="Properties\DataSources\Przynależność_do_drużyny.datasource" />
+    <None Include="Properties\DataSources\Statystyki.datasource" />
+    <None Include="Properties\DataSources\Terminarz.datasource" />
+    <None Include="Properties\DataSources\Trener.datasource" />
+    <None Include="Properties\DataSources\Zawodnik.datasource" />
+    <None Include="Properties\DataSources\Zdarzenia.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="zadaniepabADataSet.xsc">
+      <DependentUpon>zadaniepabADataSet.xsd</DependentUpon>
+    </None>
+    <None Include="zadaniepabADataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>zadaniepabADataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="zadaniepabADataSet.xss">
+      <DependentUpon>zadaniepabADataSet.xsd</DependentUpon>
+    </None>
+    <None Include="zadaniepabADataSet1.xsc">
+      <DependentUpon>zadaniepabADataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="zadaniepabADataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>zadaniepabADataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="zadaniepabADataSet1.xss">
+      <DependentUpon>zadaniepabADataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="zadaniepabADataSet2.xsc">
+      <DependentUpon>zadaniepabADataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="zadaniepabADataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>zadaniepabADataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="zadaniepabADataSet2.xss">
+      <DependentUpon>zadaniepabADataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="zadaniepabADataSet3.xsc">
+      <DependentUpon>zadaniepabADataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="zadaniepabADataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>zadaniepabADataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="zadaniepabADataSet3.xss">
+      <DependentUpon>zadaniepabADataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="zadaniepabADataSet4.xsc">
+      <DependentUpon>zadaniepabADataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="zadaniepabADataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>zadaniepabADataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="zadaniepabADataSet4.xss">
+      <DependentUpon>zadaniepabADataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="zadaniepabADataSet5.xsc">
+      <DependentUpon>zadaniepabADataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="zadaniepabADataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>zadaniepabADataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="zadaniepabADataSet5.xss">
+      <DependentUpon>zadaniepabADataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="zadaniepabADataSet6.xsc">
+      <DependentUpon>zadaniepabADataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="zadaniepabADataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>zadaniepabADataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="zadaniepabADataSet6.xss">
+      <DependentUpon>zadaniepabADataSet6.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <Content Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
